@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>診断テスト</h1>
+  <form action="{% url 'quiz_submit' %}" method="POST">
+    {% csrf_token %}
+    {% for q in questions %}
+      <p>{{ q.text }}</p>
+      <input type="radio" name="q{{ q.id }}" value="1">はい
+      <input type="radio" name="q{{ q.id }}" value="0">いいえ
+    {% endfor %}
+    <button type="submit">診断する</button>
+  </form>
+</body>
+</html>

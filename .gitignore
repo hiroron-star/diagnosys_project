@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Django logs
+*.log
+
+# OS or editor
+.DS_Store
+.vscode/
+
